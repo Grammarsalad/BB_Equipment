@@ -8,7 +8,7 @@
 		onEquip();
 		if (this.getContainer().getActor().getSkills().hasSkill("perk.legend_net_repair")) 
 		{
-		  local skill = this.new("scripts/skills/actives/legend_ninetails_disarm_skill");
+		  local skill = this.new("scripts/skills/actives/b_net_disarm");
 		  this.addSkill(skill);
 		}
 
