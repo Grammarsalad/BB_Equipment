@@ -29,7 +29,7 @@ this.b_net_disarm <- this.inherit("scripts/skills/skill", {
 		this.m.ActionPointCost = 5;
 		this.m.FatigueCost = 25;
 		this.m.MinRange = 1;
-		this.m.MaxRange = 2;
+		this.m.MaxRange = 1;
 	}
 
 	function getTooltip()
@@ -65,7 +65,7 @@ this.b_net_disarm <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.FatigueCostMult = _properties.IsSpecializedInNets ? this.Const.Combat.WeaponSpecFatigueMult : 1.0;
 
-		if (_properties.IsSpecializedInNets)
+		if (_properties.IsSpecializedInNetCasting)
 		{
 			this.m.HitChanceBonus = 0;
 		}
