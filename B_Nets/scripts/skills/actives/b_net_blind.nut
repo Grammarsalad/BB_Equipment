@@ -2,16 +2,15 @@ this.b_net_blind <- this.inherit("scripts/skills/skill", {
 	m = {},
 	function create()
 	{
-		this.m.ID = "actives.throw_dirt";
-		this.m.Name = "Throw Dirt";
-		this.m.Description = "Throws dirt to distract the enemy. Reduces inititive and damage output of the target by 35% for one turn. Can only be used once per battle.";
+		this.m.ID = "actives.b_net_blind";
+		this.m.Name = "Distract";
+		this.m.Description = "Use your net to distract the enemy by raking it against their eyes. Reduces inititive and damage output of the target by 35% for one turn. Can only be used once per battle.";
 		this.m.Icon = "skills/active_215.png";
 		this.m.IconDisabled = "skills/active_215_sw.png";
 		this.m.Overlay = "active_215";
 		this.m.SoundOnUse = [
-			"sounds/enemies/dlc6/throw_dirt_01.wav",
-			"sounds/enemies/dlc6/throw_dirt_02.wav",
-			"sounds/enemies/dlc6/throw_dirt_03.wav"
+			"sounds/combat/throw_net_01.wav",
+			"sounds/combat/throw_net_02.wav"
 		];
 		this.m.Type = this.Const.SkillType.Active;
 		this.m.Order = this.Const.SkillOrder.Any;
@@ -20,6 +19,7 @@ this.b_net_blind <- this.inherit("scripts/skills/skill", {
 		this.m.IsTargeted = true;
 		this.m.IsStacking = false;
 		this.m.IsAttack = false;
+		this.m.IsWeaponSkill = true;
 		this.m.IsVisibleTileNeeded = true;
 		this.m.IsUsingHitchance = true;
 		this.m.ActionPointCost = 3;
