@@ -51,3 +51,16 @@
 		}
 
   });
+      ::mods_hookNewObject("items/weapons/named/named_handgonne", function(o)
+  {
+    local onEquip = o.onEquip;
+    o.onEquip = function()
+		{
+		//	this.weapon.onEquip();
+		        onEquip();
+                        this.addSkill(this.new("scripts/skills/actives/bash"));
+		        this.addSkill(this.new("scripts/skills/actives/knock_out"));
+
+		}
+
+  });
